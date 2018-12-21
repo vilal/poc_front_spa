@@ -15,6 +15,7 @@ export default {
     return {
       accommodations: [
         {
+          id: 1,
           title: 'Maison',
           price: 10000,
           city: 'Lyon',
@@ -23,9 +24,11 @@ export default {
             'piscine',
             'belle vue'
           ],
-          featuredImage: 'https://source.unsplash.com/random/1920x1080'
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
         {
+          id: 2,
           title: 'coucou',
           price: 12,
           city: 'Lyon',
@@ -34,15 +37,846 @@ export default {
             'piscine avec debordement de la mort qui tue',
             'belle vue'
           ],
-          featuredImage: 'https://source.unsplash.com/random/1920x1080'
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
         {
+          id: 3,
           title: 'Maison',
           price: 10000,
           city: 'Lyon',
           contract_type: 'Offre en cours',
           tags: [],
-          featuredImage: 'https://source.unsplash.com/random/1920x1080'
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 1,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 2,
+          title: 'coucou',
+          price: 12,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [
+            'piscine avec debordement de la mort qui tue',
+            'belle vue'
+          ],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
+        },
+        {
+          id: 3,
+          title: 'Maison',
+          price: 10000,
+          city: 'Lyon',
+          contract_type: 'Offre en cours',
+          tags: [],
+          featuredImage: 'https://source.unsplash.com/random/1920x1080',
+          featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
       ]
     }
