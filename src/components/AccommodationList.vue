@@ -4,7 +4,7 @@
   .row
     .col-lg-9
       .d-flex.flex-row.flex-wrap.-mx-2
-        .w-100.w-md-33.w-lg-25.p-2.mb-3(v-for="accommodation in accommodations")
+        .w-100.w-md-33.p-2.mb-3(v-for="accommodation in accommodations")
           accommodation-card( :accommodation="accommodation" class="h-100")
     .col-lg-3
 
@@ -20,7 +20,7 @@
     props: {
       accommodations: {
         type: Array,
-        default: []
+        default: () => []
       }
     }
   }

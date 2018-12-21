@@ -12,7 +12,16 @@ import VueProgressiveImage from 'vue-progressive-image'
 
 
 Vue.use(BootstrapVue)
-Vue.use(VueCurrencyFilter)
+Vue.use(VueCurrencyFilter,
+{
+  symbol: '€',
+  thousandsSeparator: ' ',
+  fractionCount: 0,
+  fractionSeparator: ',',
+  symbolPosition: 'back',
+  symbolSpacing: true
+})
+
 Vue.use(VueProgressiveImage)
 
 library.add(faSpinner)
