@@ -7,6 +7,28 @@ $sizes: ( 25: 25%, 33: 33.33%, 50: 50%, 75: 75%, 100: 100%, auto: auto)
 
 @import '~bootstrap/scss/bootstrap.scss'
 
+$easings: (default: cubic-bezier(.4, .25, .3, 1), in: cubic-bezier(.6, .1, .8, .7), out: cubic-bezier(.2, .3, .4, .9), in-out: cubic-bezier(.5, .15, .4, 1), bounce: cubic-bezier(.4, .25, .3, 1.4))
+
+// cubic-bezier
+@function cb($fn: default)
+  @return map-get($easings, $fn)
+
+.accommodation
+  padding: 0 1.25rem 0
+  background-color: red
+  transform: translate3d(0, 0, 0)
+
+  &-enter-active
+    transition: all 375ms cb(out) 225ms
+  &-leave-active
+    transition: all 300ms cb(in)
+
+  &-enter,
+  &-leave-to
+    opacity: 0
+    transform: translate3d(100%, 0, 0)
+
+
 html
   font-size: 62.5%
 
