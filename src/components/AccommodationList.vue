@@ -3,8 +3,8 @@
 .container-fluid
   .row
     .col-lg-9
-      .d-flex.flex-row.flex-wrap.-mx-2
-        .w-100.w-md-33.p-2.mb-3(v-for="accommodation in accommodations")
+      fade-up-accommodations
+        .accommodation__feed.w-100.w-md-33.p-2.mb-3(v-for="(accommodation, index) in accommodations" :key="accommodation.id")
           accommodation-card( :accommodation="accommodation" class="h-100")
     .col-lg-3
 
@@ -12,10 +12,12 @@
 
 <script>
   import AccommodationCard from "./AccommodationCard"
+  import FadeUpAccommodations from "./Transitions/fadeUpAccommodations"
 
   export default {
     components: {
-      AccommodationCard
+      AccommodationCard,
+      FadeUpAccommodations
     },
     props: {
       accommodations: {
@@ -25,12 +27,6 @@
     }
   }
 </script>
-
-
-<style lang="sass" scoped>
-
-
-</style>
 
 
 
