@@ -12,7 +12,7 @@
         :aspect-ratio="0.68"
         class="img-cover-wrapper"
       )
-      p.z-index-md.position-absolute.pin-l.pin-t.pl-3.pt-2.pb-2.text-uppercase.text-sm.linear-gradient.text-white {{ accommodation.contract_type }}
+      p.z-index-md.position-absolute.pin-l.pin-t.pin-r.pl-3.pt-2.pb-2.text-uppercase.text-sm.linear-gradient.text-white {{ accommodation.contract_type }}
     b-card-body(class="p-3")
       .d-flex.flex-column.justify-content-between.h-100
         div
