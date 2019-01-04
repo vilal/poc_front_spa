@@ -5,7 +5,7 @@
     class="shadow border-0 overflow-hidden"
     no-body
   )
-    b-link(:to="{name: 'accommodations', params: { id: accommodation.id }}")
+    b-link(:to="{name: 'accommodation', params: { id: accommodation.id }}")
       progressive-img(
         :src="accommodation.featuredImage"
         :placeholder="accommodation.featuredImagePlaceholder"
