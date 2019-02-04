@@ -1,18 +1,18 @@
 <template lang="pug">
 
-.container-fluid(:class="{detail: accommodationActiveId >= 0}")
+.container-fluid(:class="{detail: activeId >= 0}")
   .row
-    .col-lg-9(:class='{"position-static": accommodationActiveId >= 0}')
+    .col-lg-9(:class='{"position-static": activeId >= 0}')
       fade-up-accommodations
-        .accommodation__feed.p-2.mb-3(v-for="(accommodation, index) in accommodations" :key="accommodation.id"  :class="{active: accommodationActiveId === index}")
-          b-link(:to="{name: 'accommodation', params: { id: accommodation.id }}" @click.native="transitionClick(accommodation.id)")
+        .accommodation__feed.p-2.mb-3(v-for="(accommodation, index) in accommodations" :key="accommodation.id"  :class="{active: activeId === index}")
+          b-link(:to="{name: 'accommodation', params: { id: accommodation.id }}" @click.native="setActive(accommodation.id)")
             accommodation-card(:accommodation="accommodation" class="h-100")
     .col-lg-3
 
-  .accommodation-detail-wrapper(v-if="accommodationActiveId >= 0")
-    accommodation-detail(:accommodation="accommodations[accommodationActiveId]")
-    b-link.close(:to="{name: 'accommodations'}")
-      font-awesome-icon(icon="times" @click="accommodationActiveId = undefined")
+  .accommodation-detail-wrapper(v-if="activeId >= 0")
+    accommodation-detail(:accommodation="accommodations[activeId]")
+    b-link.close(:to="{name: 'accommodations'}"  @click.native="setActive(undefined)")
+      font-awesome-icon(icon="times")
 
 </template>
 
@@ -36,19 +36,12 @@
     },
     data () {
       return {
-        accommodationActiveId: parseInt(this.$route.params.id)
+        activeId: parseInt(this.$route.params.id)
       }
     },    
     methods: {
-      transitionClick (id) {
-        console.log(this.accommodationActiveId)
-        // event.preventDefault()
-        // console.log(event)
-        // console.log(id)
-        // console.log(index)
-        // console.log(this.accommodations)
-        // console.log(this.accommodations[id - 1])
-        this.accommodationActiveId = id
+      setActive (id) {
+        this.activeId = id
       }
     }
   }
