@@ -38,10 +38,15 @@
       return {
         activeId: parseInt(this.$route.params.id)
       }
-    },    
+    },
+    watch: {
+      '$route.params.id' (id) {
+        this.setActive(id)
+      }
+    },
     methods: {
       setActive (id) {
-        this.activeId = id
+        this.activeId = parseInt(id)
       }
     }
   }
