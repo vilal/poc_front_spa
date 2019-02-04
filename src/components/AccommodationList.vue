@@ -5,8 +5,8 @@
     .col-lg-9(:class='{"position-static": accommodationActiveId >= 0}')
       fade-up-accommodations
         .accommodation__feed.p-2.mb-3(v-for="(accommodation, index) in accommodations" :key="accommodation.id"  :class="{active: accommodationActiveId === index}")
-          //- b-link(:to="{name: 'accommodation', params: { id: accommodation.id }}")
-          div(@click="transitionClick(accommodation.id, index)")
+          //- a(:to="{name: 'accommodation', params: { id: accommodation.id }}")
+          a(@click="transitionClick(accommodation.id, index)")
             accommodation-card(:accommodation="accommodation" class="h-100")
     .col-lg-3
 
@@ -33,29 +33,53 @@
       accommodations: {
         type: Array,
         default: () => []
+      },
+      accommodationActiveId: {
+        type: Number,
+        default: undefined
       }
     },
-    data () {
-      return {
-        accommodationActiveId: undefined
-      }
-    },
+    // data () {
+    //   return {
+    //     accommodationActiveId: undefined
+    //   }
+    // },
     methods: {
-      transitionClick (id, index) {
+      transitionClick (id) {
         // event.preventDefault()
         // console.log(event)
-        console.log(id)
-        console.log(index)
-        console.log(this.accommodations)
-        console.log(this.accommodations[id - 1])
+        // console.log(id)
+        // console.log(index)
+        // console.log(this.accommodations)
+        // console.log(this.accommodations[id - 1])
         this.accommodationActiveId = id - 1
+        this.$router.push({ name: 'accommodation', params: { id: this.accommodationActiveId } })
       }
     },
+    beforeRouteLeave: function (to, from, next) {
+      console.log(to)
+      console.log(from)
+      console.log(next)
+    },
+    beforeRouteUpdate: function (to, from, next) {
+      console.log(to)
+      console.log(from)
+      console.log(next)
+    },
     // beforeRouteLeave: function (to, from, next) {
-    //   console.log(to)
-    //   console.log(from)
-    //   console.log(next)
+    //   conso
+    //   // var self = this;
+    //   // self.save( { callback: proceed } );
+
+    //   // function proceed() {
+    //   //     if (self.validationErrors.length === 0) {
+    //   //         next();
+    //   //     } else {
+    //   //         next(false);
+    //   //     }
+    //   // }
     // },
+
   }
 </script>
 
@@ -76,13 +100,18 @@
   .accommodation__feed
     position: absolute
     width: 33.3333%
-    &:nth-child(1)
+    &:nth-child(3n+1)
       left: 0%
-    &:nth-child(2)
+    &:nth-child(3n+2)
       left: 33.3333%
-    &:nth-child(3)
+    &:nth-child(3n+3)
       left: 66.6666%
-    .card
+    &:nth-child(3n+4),
+    &:nth-child(3n+5),
+    &:nth-child(3n+6)
+      top: 28vw
+    .card,
+    .h-100
       transition: all $duration ease 0s
 
   .detail
@@ -97,12 +126,14 @@
       width: 100%
       .card
         box-shadow: none !important
+        height: auto !important
       .card-body
         opacity: 0
         visibility: hidden
         padding: 0 !important
         .h-100
           display: none !important
+          height: 0% !important
 
   .accommodation-detail-wrapper
     padding-top: 67vw

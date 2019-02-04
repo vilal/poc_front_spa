@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import AccommodationIndex from './views/accommodations/Index.vue'
 
 Vue.use(Router)
 
@@ -20,7 +21,7 @@ export default new Router({
     {
       path: '/accommodations/:id',
       name: 'accommodation',
-      component: () => import('./views/accommodations/Show.vue')
+      component: AccommodationIndex, props: { accommodationActiveId: ':id' }
     }
   ]
 })
