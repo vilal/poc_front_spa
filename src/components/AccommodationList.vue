@@ -5,8 +5,7 @@
     .col-lg-9(:class='{"position-static": accommodationActiveId >= 0}')
       fade-up-accommodations
         .accommodation__feed.p-2.mb-3(v-for="(accommodation, index) in accommodations" :key="accommodation.id"  :class="{active: accommodationActiveId === index}")
-          //- a(:to="{name: 'accommodation', params: { id: accommodation.id }}")
-          a(@click="transitionClick(accommodation.id, index)")
+          b-link(:to="{name: 'accommodation', params: { id: accommodation.id }}" @click.native="transitionClick(accommodation.id)")
             accommodation-card(:accommodation="accommodation" class="h-100")
     .col-lg-3
 
@@ -33,53 +32,25 @@
       accommodations: {
         type: Array,
         default: () => []
-      },
-      accommodationActiveId: {
-        type: Number,
-        default: undefined
       }
     },
-    // data () {
-    //   return {
-    //     accommodationActiveId: undefined
-    //   }
-    // },
+    data () {
+      return {
+        accommodationActiveId: parseInt(this.$route.params.id)
+      }
+    },    
     methods: {
       transitionClick (id) {
+        console.log(this.accommodationActiveId)
         // event.preventDefault()
         // console.log(event)
         // console.log(id)
         // console.log(index)
         // console.log(this.accommodations)
         // console.log(this.accommodations[id - 1])
-        this.accommodationActiveId = id - 1
-        this.$router.push({ name: 'accommodation', params: { id: this.accommodationActiveId } })
+        this.accommodationActiveId = id
       }
-    },
-    beforeRouteLeave: function (to, from, next) {
-      console.log(to)
-      console.log(from)
-      console.log(next)
-    },
-    beforeRouteUpdate: function (to, from, next) {
-      console.log(to)
-      console.log(from)
-      console.log(next)
-    },
-    // beforeRouteLeave: function (to, from, next) {
-    //   conso
-    //   // var self = this;
-    //   // self.save( { callback: proceed } );
-
-    //   // function proceed() {
-    //   //     if (self.validationErrors.length === 0) {
-    //   //         next();
-    //   //     } else {
-    //   //         next(false);
-    //   //     }
-    //   // }
-    // },
-
+    }
   }
 </script>
 

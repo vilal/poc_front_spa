@@ -1,5 +1,5 @@
 <template lang="pug">
-  accommodation-list(:accommodations="accommodations" :accommodationActiveId="accommodationActiveId")
+  accommodation-list(:accommodations="accommodations")
 
 </template>
 
@@ -10,7 +10,6 @@ export default {
   components: {
     AccommodationList
   },
-
   mounted() {
       let interval
       interval = setInterval(() => {
@@ -24,11 +23,10 @@ export default {
 
   data () {
     return {
-      accommodationActiveId: undefined,
       fakeDate: [
         {
-          id: 1,
-          title: 'Maison',
+          id: 0,
+          title: 'Maison 0',
           price: 10000,
           city: 'Lyon',
           contract_type: 'Offre en cours',
@@ -40,8 +38,8 @@ export default {
           featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
         {
-          id: 2,
-          title: 'coucou',
+          id: 1,
+          title: 'coucou 1',
           price: 12,
           city: 'Lyon',
           contract_type: 'Offre en cours',
@@ -53,8 +51,8 @@ export default {
           featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
         {
-          id: 3,
-          title: 'Maison',
+          id: 2,
+          title: 'Maison 2',
           price: 10000,
           city: 'Lyon',
           contract_type: 'Offre en cours',
@@ -63,8 +61,8 @@ export default {
           featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
         {
-          id: 4,
-          title: 'Maison',
+          id: 3,
+          title: 'Maison 3',
           price: 10000,
           city: 'Lyon',
           contract_type: 'Offre en cours',
@@ -76,8 +74,8 @@ export default {
           featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
         {
-          id: 5,
-          title: 'coucou',
+          id: 4,
+          title: 'coucou 4',
           price: 12,
           city: 'Lyon',
           contract_type: 'Offre en cours',
@@ -89,8 +87,8 @@ export default {
           featuredImagePlaceholder: 'https://source.unsplash.com/random/192x108'
         },
         {
-          id: 6,
-          title: 'Maison',
+          id: 5,
+          title: 'Maison 5',
           price: 10000,
           city: 'Lyon',
           contract_type: 'Offre en cours',

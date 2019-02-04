@@ -21,7 +21,7 @@ export default new Router({
     {
       path: '/accommodations/:id',
       name: 'accommodation',
-      component: AccommodationIndex, props: { accommodationActiveId: ':id' }
+      component: AccommodationIndex
     }
   ]
 })
