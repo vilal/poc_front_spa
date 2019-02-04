@@ -1,22 +1,32 @@
 <template lang="pug">
 
-.container-fluid
+.container-fluid(:class="{detail: accommodationActiveId >= 0}")
   .row
-    .col-lg-9
+    .col-lg-9(:class='{"position-static": accommodationActiveId >= 0}')
       fade-up-accommodations
-        .accommodation__feed.w-100.w-md-33.p-2.mb-3(v-for="(accommodation, index) in accommodations" :key="accommodation.id")
-          accommodation-card( :accommodation="accommodation" class="h-100")
+        .accommodation__feed.p-2.mb-3(v-for="(accommodation, index) in accommodations" :key="accommodation.id"  :class="{active: accommodationActiveId === index}")
+          //- b-link(:to="{name: 'accommodation', params: { id: accommodation.id }}")
+          div(@click="transitionClick(accommodation.id, index)")
+            accommodation-card(:accommodation="accommodation" class="h-100")
     .col-lg-3
+
+  .accommodation-detail-wrapper(v-if="accommodationActiveId >= 0")
+    accommodation-detail(:accommodation="accommodations[accommodationActiveId]")
+    b-link.close(:to="{name: 'accommodations'}")
+      font-awesome-icon(icon="times" @click="accommodationActiveId = undefined")
 
 </template>
 
 <script>
+  /* eslint-disable no-console */
   import AccommodationCard from "./AccommodationCard"
+  import AccommodationDetail from "./AccommodationDetail"
   import FadeUpAccommodations from "./Transitions/fadeUpAccommodations"
 
   export default {
     components: {
       AccommodationCard,
+      AccommodationDetail,
       FadeUpAccommodations
     },
     props: {
@@ -24,9 +34,80 @@
         type: Array,
         default: () => []
       }
-    }
+    },
+    data () {
+      return {
+        accommodationActiveId: undefined
+      }
+    },
+    methods: {
+      transitionClick (id, index) {
+        // event.preventDefault()
+        // console.log(event)
+        console.log(id)
+        console.log(index)
+        console.log(this.accommodations)
+        console.log(this.accommodations[id - 1])
+        this.accommodationActiveId = id - 1
+      }
+    },
+    // beforeRouteLeave: function (to, from, next) {
+    //   console.log(to)
+    //   console.log(from)
+    //   console.log(next)
+    // },
   }
 </script>
+
+<style lang="sass">
+  $duration: 500ms
+  .close
+    position: fixed
+    right: 2rem
+    top: 2rem
+    z-index: 12
+    color: black
+    font-size: 3rem
+
+  .accommodation__feed,
+  .accommodation__feed .card-body
+    transition: all $duration ease 0s, visibility 0ms linear $duration
+
+  .accommodation__feed
+    position: absolute
+    width: 33.3333%
+    &:nth-child(1)
+      left: 0%
+    &:nth-child(2)
+      left: 33.3333%
+    &:nth-child(3)
+      left: 66.6666%
+    .card
+      transition: all $duration ease 0s
+
+  .detail
+    .accommodation__feed:not(.active)
+      opacity: 0
+      visibility: hidden
+
+    .accommodation__feed.active
+      top: 0
+      left: 0
+      right: 0
+      width: 100%
+      .card
+        box-shadow: none !important
+      .card-body
+        opacity: 0
+        visibility: hidden
+        padding: 0 !important
+        .h-100
+          display: none !important
+
+  .accommodation-detail-wrapper
+    padding-top: 67vw
+
+</style>
 
 
 
