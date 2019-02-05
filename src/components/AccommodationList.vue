@@ -35,12 +35,6 @@
       AccommodationDetail,
       FadeUpAccommodations
     },
-    // props: {
-    //   accommodations: {
-    //     type: Array,
-    //     default: () => []
-    //   }
-    // },
     data () {
       return {
         activeId: parseInt(this.$route.params.id),
