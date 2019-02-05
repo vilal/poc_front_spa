@@ -46,24 +46,17 @@
     watch: {
       '$route.params.id' (id) {
         this.setActive(id)
-        if (id != undefined) {
-          this.fetchData(id)
-        }
-        else {
-          if (!this.accommodations.length) {
-            this.fetchAllData()
-          }
-        }
+        this.getDatas(id)
       }
     },
     methods: {
       setActive (id) {
         this.activeId = parseInt(id)
       },
-      fetchData (id) {
+      fetchActiveAccommodation (id) {
         this.isLoading = true
 
-        console.log('fetchData '+id)
+        console.log('fetchActiveAccommodation '+id)
 
         axios
           .get(`/api/accommodation-${id}.json`)
@@ -74,8 +67,8 @@
             }
           )
       },
-      fetchAllData() {
-        console.log('fetchAllData')
+      fetchAccommodations() {
+        console.log('fetchAccommodations')
         this.isLoading = true
         axios
           .get('/api/accommodations.json')
@@ -92,15 +85,20 @@
             this.isLoading = false
             }
           )
+      },
+      getDatas(id) {
+        if (id != undefined) {
+          this.fetchActiveAccommodation(id)
+        }
+        else {
+          if (!this.accommodations.length) {
+            this.fetchAccommodations()
+          }
+        }
       }
     },
     mounted () {
-      if (this.$route.params.id != undefined) {
-        this.fetchData(this.$route.params.id)
-      }
-      else {
-        this.fetchAllData()
-      }
+      this.getDatas(this.$route.params.id)
     }
   }
 </script>
@@ -112,7 +110,6 @@
     right: 2rem
     top: 2rem
     z-index: 12
-    color: black
     svg
       width: 3rem !important
       height: 3rem
