@@ -1,5 +1,6 @@
 <template lang="pug">
-  accommodation-list(:accommodations="accommodations")
+  //- accommodation-list(:accommodations="accommodations")
+  accommodation-list
 
 </template>
 
