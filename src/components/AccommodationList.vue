@@ -55,25 +55,19 @@
       },
       fetchActiveAccommodation (id) {
         this.isLoading = true
-
-        console.log('fetchActiveAccommodation '+id)
-
         axios
           .get(`/api/accommodation-${id}.json`)
           .then( response => {
-            console.log(response.data)
             this.activeAccommodation = response.data
             this.isLoading = false
             }
           )
       },
       fetchAccommodations() {
-        console.log('fetchAccommodations')
         this.isLoading = true
         axios
           .get('/api/accommodations.json')
           .then( response => {
-            console.log(response.data)
             let interval
             interval = setInterval(() => {
               this.accommodations.push(response.data.shift())
