@@ -5,6 +5,8 @@ $primary: #E37641
 
 $sizes: ( 25: 25%, 33: 33.33%, 50: 50%, 75: 75%, 100: 100%, auto: auto)
 
+$duration: 500ms
+
 @import '~bootstrap/scss/bootstrap.scss'
 
 $easings: (default: cubic-bezier(.4, .25, .3, 1), in: cubic-bezier(.6, .1, .8, .7), out: cubic-bezier(.2, .3, .4, .9), in-out: cubic-bezier(.5, .15, .4, 1), bounce: cubic-bezier(.4, .25, .3, 1.4))
@@ -12,6 +14,29 @@ $easings: (default: cubic-bezier(.4, .25, .3, 1), in: cubic-bezier(.6, .1, .8, .
 // cubic-bezier
 @function cb($fn: default)
   @return map-get($easings, $fn)
+
+
+
+
+
+///////////////////////////////////////////////////////////
+// LAYOUT
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+html
+  font-size: 62.5%
+
+body
+  color: #292929
+  font-size: 1.6rem
+
+
+
+
+
+///////////////////////////////////////////////////////////
+// ACCOMMODATION INDEX / SHOW
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .accommodation
   padding: 0 1.25rem 0
@@ -29,12 +54,87 @@ $easings: (default: cubic-bezier(.4, .25, .3, 1), in: cubic-bezier(.6, .1, .8, .
     transform: translate3d(100%, 0, 0)
 
 
-html
-  font-size: 62.5%
+.close
+  position: fixed
+  right: 2rem
+  top: 2rem
+  z-index: 12
+  svg
+    width: 3rem !important
+    height: 3rem
+    color: white
 
-body
-  color: #292929
-  font-size: 1.6rem
+.accommodation__feed,
+.accommodation__feed .card-body
+  transition: all $duration ease 0s, visibility 0ms linear $duration
+
+.accommodation__feed
+  position: absolute
+  width: 33.3333%
+  &:nth-child(3n+1)
+    left: 0%
+  &:nth-child(3n+2)
+    left: 33.3333%
+  &:nth-child(3n+3)
+    left: 66.6666%
+  .card,
+  .h-100
+    transition: all $duration ease 0s
+
+.detail
+  .accommodation__feed:not(.active)
+    opacity: 0
+    visibility: hidden
+
+  .accommodation__feed.active
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    .card
+      box-shadow: none !important
+      height: auto !important
+    .card-body
+      opacity: 0
+      visibility: hidden
+      padding: 0 !important
+      .h-100
+        display: none !important
+        height: 0% !important
+
+.accommodation-detail-wrapper
+  padding-top: 67vw
+  position: relative
+  margin-left: -1rem
+  margin-right: -1rem
+  margin-top: -2rem
+
+  .img-cover-wrapper
+    animation: fade 0ms ease $duration forwards
+    opacity: 0
+    position: absolute
+    left: 0
+    top: 0
+
+@for $i from 3 through 30
+  @for $j from 1 through 3
+    .accommodation__feed:nth-child(#{$i+$j})
+      top: 28vw * floor($i / 3)
+
+
+@keyframes fade
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+
+
+
+///////////////////////////////////////////////////////////
+// UTILITY CLASS
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .pin-t
   top: 0
