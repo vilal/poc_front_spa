@@ -12,9 +12,8 @@ export default {
     AccommodationList
   },
   mounted() {
-
     axios
-      .get('/accommodations.json')
+      .get('/api/accommodations.json')
       .then( response => {
         let interval
         interval = setInterval(() => {
